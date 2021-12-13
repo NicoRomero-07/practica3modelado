@@ -40,4 +40,10 @@ public class Acceso {
     public void setTipo(TipoAcceso tipo){
         this.tipo = tipo;
     }
+
+    public String toString() {
+        String res = "(";
+        res += fecha.toString() + ", " +  tipo.toString() + ")";
+        return res;
+    }
 }

@@ -36,4 +36,13 @@ public class Profesional {
     public void removeAcceso(Acceso a) {
         this.accesores.remove(a);
     }
+
+    public String toString() {
+        String res = "[";
+        for(Acceso a : accesores) {
+            res += a.toString();
+        }
+        res += "]";
+        return res;
+    }
 }
