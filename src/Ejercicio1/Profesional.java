@@ -28,6 +28,12 @@ public class Profesional {
     //Adder para accesos
 
     public void addAcceso(Acceso a) {
-        accesores.add(a);
+        this.accesores.add(a);
+    }
+
+    //Remover para accesos
+
+    public void removeAcceso(Acceso a) {
+        this.accesores.remove(a);
     }
 }
