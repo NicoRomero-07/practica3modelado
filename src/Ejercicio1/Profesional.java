@@ -5,6 +5,8 @@ import java.util.List;
 public class Profesional {
     private List<Acceso> accesores;
 
+    //Constructores
+
     public Profesional() {
         this.accesores = null;
     }
@@ -13,6 +15,8 @@ public class Profesional {
         this.accesores = acc;
     }
 
+    //Getters & Setters
+
     public List<Acceso> getAccesores() {
         return this.accesores;
     }
@@ -20,6 +24,8 @@ public class Profesional {
     public void setAccesores(List<Acceso> acc) {
         this.accesores = acc;
     }
+
+    //Adder para accesos
 
     public void addAcceso(Acceso a) {
         accesores.add(a);
