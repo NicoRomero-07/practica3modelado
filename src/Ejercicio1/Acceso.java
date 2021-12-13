@@ -10,4 +10,20 @@ public class Acceso {
         this.fecha = fecha;
         this.tipo = tipo;
     }
+
+    public Date getFecha(){
+        return fecha;
+    }
+
+    public TipoAcceso getTipo(){
+        return tipo;
+    }
+
+    public void setFecha(Date fecha){
+        this.fecha = fecha;
+    }
+
+    public void setTipo(TipoAcceso tipo){
+        this.tipo = tipo;
+    }
 }
