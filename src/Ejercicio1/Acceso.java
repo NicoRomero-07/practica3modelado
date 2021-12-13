@@ -3,12 +3,26 @@ package Ejercicio1;
 import java.util.Date;
 
 public class Acceso {
-    public Date fecha;
-    public TipoAcceso tipo;
+    private Date fecha;
+    private TipoAcceso tipo;
+    private Profesional profesional;
+    private Expediente expediente;
 
-    public Acceso(Date fecha, TipoAcceso tipo){
+
+    public Acceso(Date fecha, TipoAcceso tipo, Profesional profesional, Expediente expediente){
         this.fecha = fecha;
         this.tipo = tipo;
+        this.profesional = profesional;
+        this.expediente = expediente;
+        profesional.addAcceso(this);
+        expediente.addAcceso(this);
+    }
+
+    public void remove(){
+        fecha = null;
+        tipo = null;
+        profesional.removeAcceso(this);
+        expediente.removeAcceso(this);
     }
 
     public Date getFecha(){
