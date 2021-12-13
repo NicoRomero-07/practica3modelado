@@ -32,5 +32,11 @@ public class Expediente {
     protected void removeAcceso(Acceso a){
         acceso.remove(a);
     }
+    /*
+    public String toString(){
+        return "Paciente: " + Paciente.toString() + "Acceso: " + acceso.toString();
+    }
+
+     */
 
 }

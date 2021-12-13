@@ -1,5 +1,6 @@
 package Ejercicio1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profesional {
@@ -8,7 +9,7 @@ public class Profesional {
     //Constructores
 
     public Profesional() {
-        this.accesores = null;
+        this.accesores = new ArrayList<>();
     }
 
     public Profesional(List<Acceso> acc) {
