@@ -2,7 +2,6 @@ package Ejercicio2;
 
 public class Activo extends Trabajador {
 
-    private Double salario;
 
     public Activo(String nombre,String ss){
         super(nombre,ss);
@@ -10,6 +9,6 @@ public class Activo extends Trabajador {
 
     @Override
     protected void incrementar() {
-        super.setSalario(salario*=1.02);
+        super.setSalario(super.getSalario() * 1.02);
     }
 }
