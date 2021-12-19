@@ -6,15 +6,17 @@ public class MedioPensionista implements ActivoInterface, PensionistaInterface{
     private Pensionista pensionista;
     private double salario;
 
-
-    public MedioPensionista(String nombre, String ss){
-        activo = new Activo(nombre,ss);
-        pensionista = new Pensionista(nombre,ss);
-    }
-
     public MedioPensionista(Activo a, Pensionista p){
-        activo = a;
-        pensionista = p;
+        try{
+            activo = a;
+            pensionista = p;
+            if(a.getNombre() != p.getNombre() || a.getNumeroSeguridadSocial() != p.getNumeroSeguridadSocial()){
+                throw new Exception("No coincide nombre o numero de ss");
+            }
+        }catch(Exception e){
+
+        }
+
     }
 
     public void incrementar(){
