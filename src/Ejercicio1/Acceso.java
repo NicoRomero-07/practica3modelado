@@ -5,14 +5,14 @@ import java.util.Date;
 public class Acceso {
     private Date fecha;
     private TipoAcceso tipo;
-    private Profesional profesional;
+    private Profesional accesor;
     private Expediente expediente;
 
 
     public Acceso(Date fecha, TipoAcceso tipo, Profesional profesional, Expediente expediente){
         this.fecha = fecha;
         this.tipo = tipo;
-        this.profesional = profesional;
+        this.accesor = profesional;
         this.expediente = expediente;
         profesional.addAcceso(this);
         expediente.addAcceso(this);
@@ -21,7 +21,7 @@ public class Acceso {
     public void remove(){
         fecha = null;
         tipo = null;
-        profesional.removeAcceso(this);
+        accesor.removeAcceso(this);
         expediente.removeAcceso(this);
     }
 

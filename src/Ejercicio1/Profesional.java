@@ -1,46 +1,45 @@
 package Ejercicio1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Profesional {
-    private List<Acceso> accesores;
+    private List<Acceso> accesos;
 
     //Constructores
 
     public Profesional() {
-        this.accesores = new ArrayList<>();
+        this.accesos = new ArrayList<>();
     }
 
     public Profesional(List<Acceso> acc) {
-        this.accesores = acc;
+        this.accesos = acc;
     }
 
     //Getters & Setters
 
-    public List<Acceso> getAccesores() {
-        return this.accesores;
+    public Enumeration<Acceso> getAccesores() {
+        return Collections.enumeration(accesos);
     }
 
     public void setAccesores(List<Acceso> acc) {
-        this.accesores = acc;
+        this.accesos = acc;
     }
 
     //Adder para accesos
 
     public void addAcceso(Acceso a) {
-        this.accesores.add(a);
+        this.accesos.add(a);
     }
 
     //Remover para accesos
 
     public void removeAcceso(Acceso a) {
-        this.accesores.remove(a);
+        this.accesos.remove(a);
     }
 
     public String toString() {
         String res = "[";
-        for(Acceso a : accesores) {
+        for(Acceso a : accesos) {
             res += a.toString();
         }
         res += "]";
