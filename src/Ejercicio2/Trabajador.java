@@ -5,9 +5,10 @@ public abstract class Trabajador {
     private String numeroSeguridadSocial;
     private Double salario;
 
-    public Trabajador(String nombre, String ss){
+    public Trabajador(String nombre, String ss,Double salario){
         this.nombre = nombre;
         this.numeroSeguridadSocial = ss;
+        this.salario = salario;
     }
 
     protected abstract void incrementar();

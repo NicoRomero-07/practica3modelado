@@ -3,8 +3,8 @@ package Ejercicio2;
 public class Pensionista extends Trabajador {
 
 
-    public Pensionista(String nombre, String ss) {
-        super(nombre, ss);
+    public Pensionista(String nombre, String ss,Double salario) {
+        super(nombre,ss,salario);
     }
 
     @Override
