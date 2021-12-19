@@ -4,7 +4,7 @@ public class MedioPensionista{
 
     private Activo activo;
     private Pensionista pensionista;
-    protected double salario;
+    private double salario;
 
 
     public MedioPensionista(Activo a, Pensionista p){
@@ -15,6 +15,6 @@ public class MedioPensionista{
     protected void incrementar(){
         activo.incrementar();
         pensionista.incrementar();
-        salario = activo.salario + pensionista.salario;
+        salario = activo.getSalario() + pensionista.getSalario();
     }
 }
