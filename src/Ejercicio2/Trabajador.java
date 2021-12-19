@@ -6,6 +6,9 @@ public abstract class Trabajador {
     private Double salario;
 
     public Trabajador(String nombre, String ss,Double salario){
+        assert nombre != null;
+        assert ss != null;
+        assert salario != null;
         this.nombre = nombre;
         this.numeroSeguridadSocial = ss;
         this.salario = salario;
@@ -17,20 +20,12 @@ public abstract class Trabajador {
         return salario;
     }
 
-    public void setSalario(Double salario) {
+    protected void setSalario(Double salario) {
         this.salario = salario;
     }
 
     public String getNumeroSeguridadSocial() {
         return numeroSeguridadSocial;
-    }
-
-    public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
-        this.numeroSeguridadSocial = numeroSeguridadSocial;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getNombre() {
