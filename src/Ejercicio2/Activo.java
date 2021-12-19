@@ -3,8 +3,8 @@ package Ejercicio2;
 public class Activo extends Trabajador {
 
 
-    public Activo(String nombre,String ss){
-        super(nombre,ss);
+    public Activo(String nombre,String ss,Double salario){
+        super(nombre,ss,salario);
     }
 
     @Override
