@@ -17,4 +17,8 @@ public class MedioPensionista {
         pensionista.incrementar();
         salario = activo.getSalario() + pensionista.getSalario();
     }
+
+    public double getSalario() {
+        return this.salario;
+    }
 }
