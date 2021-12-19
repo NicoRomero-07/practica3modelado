@@ -1,6 +1,6 @@
 package Ejercicio2;
 
-public class Pensionista implements Trabajador {
+public class Pensionista extends Trabajador {
 
     public Pensionista(String nombre, String ss) {
         super(nombre, ss);
