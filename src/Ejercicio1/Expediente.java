@@ -1,36 +1,36 @@
 package Ejercicio1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Expediente {
     private Paciente paciente;
-    private List<Acceso> acceso;
+    private List<Acceso> accesos;
 
-    public Expediente(){
-        this.paciente = null;
-        this.acceso = new ArrayList<>();
+    protected Expediente(Paciente paciente){
+        assert paciente!=null;
+        this.paciente = paciente;
+        this.accesos = new ArrayList<>();
     }
 
-    public Expediente(Paciente paciente,List<Acceso> acceso){
+    protected Expediente(Paciente paciente,List<Acceso> acceso){
         this.paciente = paciente;
-        this.acceso = acceso;
+        this.accesos = acceso;
     }
 
     public Paciente getPaciente(){
         return paciente;
     }
 
-    public List<Acceso> getAcceso(){
-        return acceso;
+    public Enumeration<Acceso> getAcceso(){
+        return Collections.enumeration(accesos);
     }
 
     protected void addAcceso(Acceso a){
-        acceso.add(a);
+        accesos.add(a);
     }
 
     protected void removeAcceso(Acceso a){
-        acceso.remove(a);
+        accesos.remove(a);
     }
     /*
     public String toString(){
