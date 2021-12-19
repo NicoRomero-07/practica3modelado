@@ -1,6 +1,6 @@
 package Ejercicio2;
 
-public class MedioPensionista{
+public class MedioPensionista {
 
     private Activo activo;
     private Pensionista pensionista;
