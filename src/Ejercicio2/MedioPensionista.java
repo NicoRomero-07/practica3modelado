@@ -8,13 +8,19 @@ public class MedioPensionista implements ActivoInterface, PensionistaInterface{
 
     public MedioPensionista(Activo a, Pensionista p){
         try{
+            if(!a.getNombre().equals(p.getNombre())
+               || !a.getNumeroSeguridadSocial().equals(p.getNumeroSeguridadSocial())
+               || !a.getSalario().equals(p.getSalario())) {
+                throw new RuntimeException();
+            }
             activo = a;
             pensionista = p;
-            if(a.getNombre() != p.getNombre() || a.getNumeroSeguridadSocial() != p.getNumeroSeguridadSocial()){
-                throw new Exception("No coincide nombre o numero de ss");
-            }
-        }catch(Exception e){
-
+            salario = a.getSalario();
+        }catch (NullPointerException ne){
+            System.err.println("Objetos creados incorrectamente");
+        }
+        catch(RuntimeException e){
+            System.err.println("No coincide nombre,numero de ss o salario");
         }
 
     }
@@ -45,6 +51,7 @@ public class MedioPensionista implements ActivoInterface, PensionistaInterface{
     }
 
     public double getSalario() {
+        assert salario != 0;
         return this.salario;
     }
 }
