@@ -7,11 +7,11 @@ public class MedioPensionista implements ActivoInterface, PensionistaInterface{
     private double salario;
 
     public MedioPensionista(Activo a, Pensionista p){
-        assert a != null;
-        assert p != null;
-        assert !a.getNombre().equals(p.getNombre());
-        assert !a.getNumeroSeguridadSocial().equals(p.getNumeroSeguridadSocial());
-        assert !a.getSalario().equals(p.getSalario());
+        assert a != null: "Objeto Activo is null";
+        assert p != null: "Objeto Pensionista is null";
+        assert a.getNombre().equals(p.getNombre()): "El nombre del activo no coincide con el del pesionista";
+        assert a.getNumeroSeguridadSocial().equals(p.getNumeroSeguridadSocial()): "El número de la seguridad social del activo no coincide con el del pensionista";
+        assert a.getSalario().equals(p.getSalario()): "El salario del activo no coincide con el del pensionista";
         activo = a;
         pensionista = p;
         salario = a.getSalario();
