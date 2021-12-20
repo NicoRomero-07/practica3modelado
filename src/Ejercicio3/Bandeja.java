@@ -38,16 +38,19 @@ public class Bandeja {
         return this.piezas;
     }
 
-    protected void put(Pieza p){
+    protected void put(Pieza p) {
         assert p != null: "La pieza no puede ser nula";
         piezas.add(p);
+        state.onPut();
     }
 
-    protected Pieza get(){
+    protected Pieza get() {
+        state.onGet();
         return piezas.get(piezas.size());
     }
 
     protected Integer size(){
+        state.onSize();
         return piezas.size();
     }
 }
