@@ -16,6 +16,7 @@ public class Bandeja {
 
     public Bandeja(Integer capacidad, LinkedList<Pieza> piezas){
         assert capacidad > 0 : "La capacidad no puede ser menor que cero";
+        assert capacidad >= piezas.size() : "La capacidad debe ser mayor al tamano de la lista de piezas";
         state = new EmptyState(this);
         this.capacidad = capacidad;
         this.piezas = piezas;
