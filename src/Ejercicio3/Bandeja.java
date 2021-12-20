@@ -1,6 +1,5 @@
 package Ejercicio3;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Bandeja {
@@ -20,7 +19,6 @@ public class Bandeja {
         state = new EmptyState(this);
         this.capacidad = capacidad;
         this.piezas = piezas;
-
     }
 
     public void changeState(State state) {
@@ -40,14 +38,14 @@ public class Bandeja {
     }
 
     protected void put(Pieza p){
-
+        piezas.add(p);
     }
 
     protected Pieza get(){
-        return null;
+        return piezas.get(piezas.size());
     }
 
     protected Integer size(){
-        return null;
+        return piezas.size();
     }
 }
