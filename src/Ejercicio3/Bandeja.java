@@ -46,8 +46,10 @@ public class Bandeja {
     }
 
     protected Pieza get(){
+        Pieza p = piezas.last();
+        piezas.remove(p);
         state.onGet();
-        return piezas.last();
+        return p;
     }
 
     protected Integer size(){
