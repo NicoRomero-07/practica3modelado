@@ -45,14 +45,14 @@ public class Bandeja {
         state.onPut();
     }
 
-    protected Pieza get(){
+    protected Pieza get() {
         Pieza p = piezas.last();
         piezas.remove(p);
         state.onGet();
         return p;
     }
 
-    protected Integer size(){
+    protected Integer size() {
         state.onSize();
         return piezas.size();
     }
