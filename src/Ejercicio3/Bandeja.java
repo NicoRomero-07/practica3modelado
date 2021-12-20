@@ -1,20 +1,21 @@
 package Ejercicio3;
 
-import java.util.LinkedList;
+
+import java.util.SortedSet;
 
 public class Bandeja {
     private State state;
     private final Integer capacidad;
-    private LinkedList<Pieza> piezas;
+    private SortedSet<Pieza> piezas;
 
     public Bandeja(Integer capacidad){
         assert capacidad > 0 : "La capacidad no puede ser menor que cero";
         state = new EmptyState(this);
         this.capacidad = capacidad;
-        this.piezas = new LinkedList<>();
+        this.piezas = new SortedSet<Pieza>();
     }
 
-    public Bandeja(Integer capacidad, LinkedList<Pieza> piezas){
+    public Bandeja(Integer capacidad, SortedSet<Pieza> piezas){
         assert capacidad > 0 : "La capacidad no puede ser menor que cero";
         assert capacidad >= piezas.size() : "La capacidad debe ser mayor al tamano de la lista de piezas";
         state = new EmptyState(this);
@@ -34,7 +35,7 @@ public class Bandeja {
         return this.capacidad;
     }
 
-    protected LinkedList<Pieza> getPiezas() {
+    protected SortedSet<Pieza> getPiezas() {
         return this.piezas;
     }
 
@@ -44,7 +45,7 @@ public class Bandeja {
     }
 
     protected Pieza get(){
-        return piezas.get(piezas.size());
+        return piezas.last();
     }
 
     protected Integer size(){
