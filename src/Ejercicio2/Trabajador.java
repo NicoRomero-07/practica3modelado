@@ -6,9 +6,9 @@ public abstract class Trabajador {
     private Double salario;
 
     public Trabajador(String nombre, String ss,Double salario){
-        assert nombre != null;
-        assert ss != null;
-        assert salario != null;
+        assert nombre != null : "El nombre del trabajador es nulo";
+        assert ss != null : "El número de la seguridad social del trabajador es nulo";
+        assert salario != null : "El salario del trabajador es nulo";
         this.nombre = nombre;
         this.numeroSeguridadSocial = ss;
         this.salario = salario;

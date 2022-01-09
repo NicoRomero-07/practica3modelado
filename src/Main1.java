@@ -17,7 +17,7 @@ public class Main1 {
         paciente1.addExpediente();
         Acceso a2 = new Acceso(fecha,tipo,p1,paciente1.getExpedienteAbierto());
 
-        System.out.println(p1);
+        System.out.println();
     }
     
 }
