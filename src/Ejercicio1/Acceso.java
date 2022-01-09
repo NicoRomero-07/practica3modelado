@@ -33,11 +33,11 @@ public class Acceso {
         return tipo;
     }
 
-    public void setFecha(Date fecha){
+    protected void setFecha(Date fecha){
         this.fecha = fecha;
     }
 
-    public void setTipo(TipoAcceso tipo){
+    protected void setTipo(TipoAcceso tipo){
         this.tipo = tipo;
     }
 

@@ -42,11 +42,13 @@ public class Bandeja {
 
     public void put(Pieza p) {
         assert p != null: "La pieza no puede ser nula";
+        assert capacidad > piezas.size(): "La bandeja ha llegado a su límite";
         piezas.add(p);
         state.onPut();
     }
 
     public Pieza get() {
+        assert piezas.size() > 0: "No hay piezas en la bandeja disponible";
         Pieza p = (Pieza) piezas.getLast();
         piezas.remove(p);
         state.onGet();
