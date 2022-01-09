@@ -40,20 +40,20 @@ public class Bandeja {
         return this.piezas;
     }
 
-    protected void put(Pieza p) {
+    public void put(Pieza p) {
         assert p != null: "La pieza no puede ser nula";
         piezas.add(p);
         state.onPut();
     }
 
-    protected Pieza get() {
+    public Pieza get() {
         Pieza p = (Pieza) piezas.getLast();
         piezas.remove(p);
         state.onGet();
         return p;
     }
 
-    protected Integer size() {
+    public Integer size() {
         state.onSize();
         return piezas.size();
     }
