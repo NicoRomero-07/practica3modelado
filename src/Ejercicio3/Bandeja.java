@@ -1,6 +1,7 @@
 package Ejercicio3;
 
 
+import java.util.LinkedList;
 import java.util.SortedSet;
 
 public class Bandeja {
@@ -12,7 +13,7 @@ public class Bandeja {
         assert capacidad > 0 : "La capacidad no puede ser menor que cero";
         state = new EmptyState(this);
         this.capacidad = capacidad;
-        this.piezas = new SortedSet<Pieza>();
+        this.piezas = (SortedSet<Pieza>) new LinkedList<Pieza>();
     }
 
     public Bandeja(Integer capacidad, SortedSet<Pieza> piezas){
